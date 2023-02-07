@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width:100%;
+    background:#17181c
+} 
+
+
+.main-container{
+    /* background-color: antiquewhite; */
+    /* height: 80vh;
+    width: 450px;
+    margin-top: 50px  ; */
+    position: relative;
+}
+
+#header{
+    height: 400px;
+    width: 100%;
+    background: rgb(117, 255, 117);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#header h2{
+    text-align: center;
+    font-size: 40px;
+    color: #17181c;
+    margin: 45px;
+}
+
+#time{
+     height: 150px;
+     width: 100%;
+     display: grid;
+     place-items: center;
+     position: absolute;
+     top: 90px;
+     /* display: none; */
+}
+
+#time h2{
+    color: #766969;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#time h2:first-child{
+    letter-spacing: 2px;
+}
+
+#time h3{
+    font-size: 120px;
+    line-height: 70px;
+}
+
+#textarea{
+    height: auto;
+    width: 100%;
+    position: absolute; 
+    top: 400px;
+}
+
+#typing, 
+#userText{
+    height: 350px;
+    width: 100%;
+    font-size: 25px;
+    color: #35393c;
+    background:transparent;
+    border:none;
+    outline: none;
+    resize: none;
+    position: absolute;
+    top: 0;
+    padding: 40px;
+}
+
+#userText{
+    top: 350px;
+    color: #17181c;
+    background: #e2e2e2;
+}
+#userText::placeholder{
+    color: #17181c;
+}
+#result{
+    height: 200px;
+    width: calc(100%-100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    left: 0;
+    top: 140px;
+    /* display: none; */
+}
+#result .show{
+    height:200px;
+    width: 250px;
+    display:grid;
+    place-items: center;
+    margin:70px 120px;
+}
+#result .show h2{
+    font-size: 40px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#result .show h1{
+    font-size: 60px;
+    line-height: 50px;
+}
+
+/* correct class for correct letters */
+.correct{
+    color: green;
+}

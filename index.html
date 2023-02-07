@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Speed Test</title>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div id="header">
+            <h2>TEST YOUR SPEED</h2>
+            <!-- Counter -->
+            <div id="time">
+                <h2>TIME</h2>
+                <h3 id="counter">00</h3>
+                <h2 id="start">Click here to start</h2>
+            </div>
+            <!-- main -->
+            <div id="textarea">
+                    <div id="typing"></div>
+                    <textarea id="userText" placeholder="Start typing here"></textarea>
+            </div>
+            <!-- Result Section -->
+            <div id="result">
+                <!-- words per minutes WPM -->
+                <div class="show">
+                    <h2>WPM</h2>
+                    <h1 id="words">00</h1>
+                </div>
+                <!-- Character per minutes CPM -->
+                <div class="show">
+                    <h2>CPM</h2>
+                    <h1 id="characters">00</h1>
+                </div>
+
+                <!-- Total Errors -->
+                <div class="show">
+                    <h2>ERRORS</h2>
+                    <h1 id="errors">00</h1>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
