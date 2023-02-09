@@ -46,6 +46,7 @@ body{
      /* display: none; */
 }
 
+
 #time h2{
     color: #766969;
     font-size: 20px;
@@ -92,9 +93,10 @@ body{
 #userText::placeholder{
     color: #17181c;
 }
+
 #result{
     height: 200px;
-    width: calc(100%-100px);
+    width: calc(100% - 100px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -102,7 +104,7 @@ body{
     position:absolute;
     left: 0;
     top: 140px;
-    /* display: none; */
+    display: none;
 }
 #result .show{
     height:200px;
@@ -126,4 +128,9 @@ body{
 /* correct class for correct letters */
 .correct{
     color: green;
+}
+
+/* correct class for correct letters */
+.incorrect{
+    color: red;
 }
