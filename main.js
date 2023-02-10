@@ -51,8 +51,7 @@ start.addEventListener("click", ()=>{
 
 function nextQuestions(){
     QuestionIndex++
-    console.log(QuestionIndex);
-    console.log(text.length);
+
     if(QuestionIndex === text.length){
         stopUser();
         return
@@ -73,9 +72,16 @@ let countDown = ()=>{
     if (timer > 50){
         timer--;
         counter.innerText = timer;
+
         
-        if (characterCount == text[QuestionIndex].length ){
-            alert("ok")
+        if(QuestionIndex + 1 == text.length && characterCount == text[QuestionIndex].length){
+            stopUser();
+            alert("congratulations");
+
+        }
+
+        else if (characterCount == text[QuestionIndex].length ){
+            alert("ok111")
             typing.innerText="";
             characterCount=0;
             index=0;
@@ -86,12 +92,7 @@ let countDown = ()=>{
         }
     }
     else{
-     
         stopUser()
-        if (characterCount == text.length ){
-            alert("ok")
-            stopUser()
-        }
     
      }
 }
