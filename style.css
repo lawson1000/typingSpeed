@@ -104,7 +104,7 @@ body{
     position:absolute;
     left: 0;
     top: 140px;
-    display: none;
+    /* display: none; */
 }
 #result .show{
     height:200px;
@@ -133,4 +133,28 @@ body{
 /* correct class for correct letters */
 .incorrect{
     color: red;
+}
+
+@media(max-width: 550px){
+ 
+    #result .show{
+        height:200px;
+        width: 50px;
+        display:grid;
+        place-items: center;
+        margin:70px 120
+        px;
+    }
+    #result .show h2{
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    #result .show h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
 }

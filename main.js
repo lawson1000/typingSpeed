@@ -41,11 +41,30 @@ start.addEventListener("click", ()=>{
         typing.appendChild(spanTxt);
     }) ;
     // start CountDown
-    interval =setInterval(countDown,1000);
+     interval =setInterval(countDown,1000);
     time.style.display = 'grid';
     result.style.display = 'none'; //display result
     start.style.pointerEvents= "none";
 })
+}
+
+
+function nextQuestions(){
+    QuestionIndex++
+    console.log(QuestionIndex);
+    console.log(text.length);
+    if(QuestionIndex === text.length){
+        stopUser();
+        return
+    }
+    text[QuestionIndex].split("").forEach(characters =>{
+        let spanTxt = document.createElement("span");
+        spanTxt.innerHTML = characters;
+        
+        typing.appendChild(spanTxt);
+    }) ;
+
+
 }
 
 startEvent();
@@ -57,9 +76,13 @@ let countDown = ()=>{
         
         if (characterCount == text[QuestionIndex].length ){
             alert("ok")
-            stopUser()
-            QuestionIndex++
-            startEvent();
+            typing.innerText="";
+            characterCount=0;
+            index=0;
+            // userValue[index] === randomText[index].innerText
+            userText.value = ""
+            nextQuestions()
+            timer=61;
         }
     }
     else{
@@ -82,11 +105,11 @@ userText.addEventListener("input", e => {
     // console.log(RandomText)
 
     // if backspace is used
-    if(e.inputType === "deleteContectBackward"){
+    if(e.inputType === "deleteContentBackward"){
         index--;
         randomText[index].classList.remove("correct");
         randomText[index].classList.remove("incorrect");
-        characterCount++
+        characterCount--
     }
 
     // if letter is correct
