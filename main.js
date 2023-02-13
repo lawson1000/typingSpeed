@@ -34,7 +34,9 @@ let timer =60;
 let interval = null
 
 // words to type
-let text = ["lorem","another lorem", "Last lorem"]
+let text = ["Lorem ipsum dolor sit, amet consectetur adipisicing elit. In mollitia itaque esse alias libero tenetur deserunt iure accusantium quibusdam dignissimos necessitatibus velit adipisci, fugiat culpa consectetur nisi porro numquam atque.",
+"another Lorem ipsum dolor sit, amet consectetur adipisicing elit. In mollitia itaque esse alias libero tenetur deserunt iure accusantium quibusdam dignissimos necessitatibus velit adipisci, fugiat culpa consectetur nisi porro numquam atque.",
+ "Last Lorem ipsum dolor sit, amet consectetur adipisicing elit. In mollitia itaque esse alias libero tenetur deserunt iure accusantium quibusdam dignissimos necessitatibus velit adipisci, fugiat culpa consectetur nisi porro numquam atque."]
 // disable userText
 userText.disabled = true;
 
@@ -80,9 +82,10 @@ function nextQuestions(){
 startEvent();
 
 let countDown = ()=>{
-    if (timer > 50){
+    if (timer > 0){
         timer--;
         counter.innerText = timer;
+        userText.focus();
 
         console.log(userText.value)
         console.log(text[QuestionIndex])
@@ -116,8 +119,9 @@ let countDown = ()=>{
     }
     else{
         stopUser()
-    
+        alert("Game Over")
      }
+     disableArrowKeys()
 }
 
 
@@ -174,4 +178,16 @@ function stopUser(){
     timer = 0; // reset timer
     characterCount =0;
  
+}
+
+function disableArrowKeys(){
+    window.addEventListener("keydown", function(e){
+
+// to disable arrow keys
+
+        if([13,37,38,39,40].indexOf(e.keyCode) > -1){
+            e.preventDefault();
+        }
+        // else if("Enter")
+    },false)
 }

@@ -6,7 +6,7 @@
 }
 
 body{
-    min-height: 100vh;
+    height: 100vh;
     width:100%;
     background:#17181c
 } 
@@ -21,7 +21,7 @@ body{
 }
 
 #header{
-    height: 400px;
+    height: 300px;
     width: 100%;
     background: rgb(117, 255, 117);
     position: absolute;
@@ -31,26 +31,27 @@ body{
 
 #header h2{
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     color: #17181c;
-    margin: 45px;
+    margin: 25px;
 }
 
+
 #time{
-     height: 150px;
+     height: 130px;
      width: 100%;
      display: grid;
      place-items: center;
      position: absolute;
-     top: 90px;
+     top: 60px;
      /* display: none; */
 }
 
 
 #time h2{
     color: #766969;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 20px;
     cursor: pointer;
 }
 
@@ -59,20 +60,19 @@ body{
 }
 
 #time h3{
-    font-size: 120px;
-    line-height: 70px;
+    font-size: 80px;
+    line-height: 50px;
 }
 
 #textarea{
     height: auto;
     width: 100%;
     position: absolute; 
-    top: 400px;
+    top: 300px;
 }
 
-#typing, 
-#userText{
-    height: 350px;
+#typing, #userText{
+    height: 200px;
     width: 100%;
     font-size: 25px;
     color: #35393c;
@@ -83,12 +83,17 @@ body{
     position: absolute;
     top: 0;
     padding: 40px;
+    
 }
 
+
 #userText{
-    top: 350px;
+    top: 150px;
+    height: 205px;
     color: #17181c;
     background: #e2e2e2;
+    cursor: none;
+    pointer-events: none;
 }
 #userText::placeholder{
     color: #17181c;
@@ -142,8 +147,7 @@ body{
         width: 50px;
         display:grid;
         place-items: center;
-        margin:70px 120
-        px;
+        margin:70px 120px;
     }
     #result .show h2{
         font-size: 30px;
